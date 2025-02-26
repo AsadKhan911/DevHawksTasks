@@ -1,5 +1,5 @@
 import { LucideUpload } from 'lucide-react';
-import Navbar from './navbar';
+import Navbar from '../components/Navbar';
 import groupImage from '../assets/group.png';
 
 const Dashboard = () => {

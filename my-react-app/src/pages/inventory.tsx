@@ -44,7 +44,7 @@ const inventory = () => {
 <section className="mt-5 mb-10">
   <h2 className="text-lg mb-5 font-bold">Select a game to continue:</h2>
 
-  <div className="flex gap-5 overflow-x-auto scrollbar-hide px-2">
+  <div className="flex gap-5 overflow-x-auto px-2 scrollbar-hide"> {/* Add 'scrollbar-hide' class */}
     {[
       { img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6A1CxycaDqb2Iez5j1ir170I0OcSG2nMbgw&s", title: "COMBAT", impressions: "1.5B - 25B+", color: 'bg-red-500', details: "Crazy Red Vs Blue\nGenre: Combat\nTop 5 Highest-Traffic Game\nPlays: 40M - 55M / month\nImpressions / placement: 1.5B - 2.5B / month\nAssumed Demographic: 12-18 y/o" },
       { img: "https://devforum-uploads.s3.dualstack.us-east-2.amazonaws.com/uploads/original/4X/2/e/7/2e7798cddbdbc774139adbbbbbfc543ac8625f34.jpeg", title: "CASUAL", impressions: "300M - 5B+", color: 'bg-blue-500', details: "Brainrot Boxfights\nGenre: Casual\nTop 10 Most Played Game" },

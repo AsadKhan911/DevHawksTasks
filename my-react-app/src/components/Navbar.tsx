@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { LayoutDashboard, Megaphone, Building, Menu, X } from "lucide-react";
+import logo from '../assets/Frame.png'
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -7,7 +8,7 @@ const Navbar = () => {
   return (
     <header className="w-full max-w-[1300px] mx-auto flex justify-between items-center border-b border-[#333] py-4 px-6">
       {/* Logo */}
-      <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">F:V</h1>
+      <img src={logo} alt="Your Alt Text" />
 
       {/* Mobile Menu Button */}
       <button
@@ -30,7 +31,7 @@ const Navbar = () => {
 
         <div className="flex items-center gap-x-2">
           <Megaphone className="w-6 h-6 text-[#a0a0a0]" />
-          <a href="#" className="text-[#a0a0a0] hover:text-white text-sm">Ad Campaign</a>
+          <a href="/cart" className="text-[#a0a0a0] hover:text-white text-sm">Ad Campaign</a>
         </div>
 
         <div className="flex items-center gap-x-2">

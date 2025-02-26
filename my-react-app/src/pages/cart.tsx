@@ -1,8 +1,8 @@
-import { LucideUpload } from 'lucide-react';
-import Navbar from './navbar';
+import { ShoppingCart } from 'lucide-react';
+import Navbar from '../components/Navbar';
 import groupImage from '../assets/group.png';
 
-const inGameVisualizer2 = () => {
+const Cart = () => {
     const adSlots = [
         {
             title: "Central-Arena",
@@ -25,7 +25,7 @@ const inGameVisualizer2 = () => {
     ];
 
     return (
-        <div className='bg-[#0a0a1a] text-white font-sans'>
+        <div className='bg-[#0a0a1a] text-white font-sans p-5'>
             <Navbar />
             <div
                 className="flex flex-col lg:flex-row gap-6 text-white p-6 rounded-xl w-full mx-auto bg-cover"
@@ -64,25 +64,17 @@ const inGameVisualizer2 = () => {
                         </div>
                     </div>
 
-                    {/* Ad Summary (Bottom Right) */}
-                    <div className="bg-gray-900 p-4 rounded-xl w-full max-w-sm flex flex-col mt-4 lg:mt-56 lg:-mr-32">
-                        <div className='flex justify-between flex-col'>
-                            <h3 className="text-lg font-bold">Visualize Your Ad Creative</h3>
-                            <h2 className="text-sm text-gray-400 mt-1">Images, Videos or 3D Files</h2>
-                        </div>
-                        <button className="bg-blue-500 justify-center font-semibold text-white mt-6 p-3 rounded-lg hover:bg-blue-600 transition flex items-center gap-2">
-                            Upload <LucideUpload />
-                        </button>
-                        <button className="bg-gray-700 font-semibold text-white mt-6 p-3 rounded-lg hover:bg-gray-800 transition">
-                            Check Guidelines
-                        </button>
+                    <div className="absolute top-23 right-4 flex items-center gap-3 bg-gray-900 text-white p-4 rounded-xl shadow-lg max-w-sm">
+                        <ShoppingCart className="w-6 h-6 text-white" />
+                        <p className="text-gray-300 font-medium">Campaign:</p>
+                        <p className="text-white font-bold">3 Items</p>
                     </div>
 
-                </div>
 
+                </div>
             </div>
         </div>
     );
 };
 
-export default inGameVisualizer2;
+export default Cart;
