@@ -1,8 +1,11 @@
 import { ShoppingCart } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import groupImage from '../assets/group.png';
+import { useNavigate } from 'react-router-dom';
 
 const Cart = () => {
+
+    const navigate = useNavigate()
     const adSlots = [
         {
             title: "Central-Arena",
@@ -64,7 +67,8 @@ const Cart = () => {
                         </div>
                     </div>
 
-                    <div className="absolute top-23 right-4 flex items-center gap-3 bg-gray-900 text-white p-4 rounded-xl shadow-lg max-w-sm">
+                    <div className="-mr-40 -mt-10 sticky flex items-center gap-3 bg-gray-900 text-white p-4 rounded-xl shadow-lg max-w-sm"
+                    onClick={()=>navigate('/campaign-details')}>
                         <ShoppingCart className="w-6 h-6 text-white" />
                         <p className="text-gray-300 font-medium">Campaign:</p>
                         <p className="text-white font-bold">3 Items</p>

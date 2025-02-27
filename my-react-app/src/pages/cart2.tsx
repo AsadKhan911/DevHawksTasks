@@ -64,51 +64,52 @@ const Cart2 = () => {
                     </div>
 
                     <hr />
-                    <div className="flex flex-col items-center justify-between bg-gray-900 p-4 rounded-lg">
-                        {/* Left Section - Campaign List */}
-                        <div className="p-3 rounded-lg bg-gray-900 w-full max-w-sm overflow-hidden">
-                            <h3 className="text-base font-bold mb-3">Your Campaign:</h3>
-                            <div className="space-y-2">
-                                {/* Campaign Items */}
-                                {[
-                                    { name: "Vault Wall 2", cpm: "$1.5 CPM", impressions: "2B-2.5B" },
-                                    { name: "Inner Vault", cpm: "$2 CPM", impressions: "0.88B-1.2B" },
-                                    { name: "Upper Grind Rails", cpm: "$1.8 CPM", impressions: "1.88B-2.2B" }
-                                ].map((campaign, index) => (
-                                    <div key={index} className="p-3 bg-gray-800 rounded-lg cursor-pointer border border-transparent hover:border-blue-400 transition">
-                                        <div className="flex justify-between">
-                                            <h4 className="text-sm font-semibold">{campaign.name}</h4>
-                                            <p className="text-sm">{campaign.cpm}</p>
-                                        </div>
-                                        <div className="flex justify-between mt-2">
-                                            <p className="text-gray-400 text-sm">Expected Impressions/mo</p>
-                                            <p className="text-[#42E34A] font-semibold text-sm">{campaign.impressions}</p>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-
-                        {/* Right Section - Projected Results */}
-                        <div className="bg-gray-900 p-3 w-full border-t border-gray-600 max-w-sm flex flex-col -mt-4">
-                            <h3 className="text-base font-semibold">Projected Results:</h3>
-                            {[
-                                { label: "Duration:", value: "1 Month" },
-                                { label: "Total Price:", value: "$7.8M-$10.1M" },
-                                { label: "Expected Impressions /mo:", value: "4.6B-5.9B", highlight: true },
-                                { label: "All Expected Performance", value: "89%", highlight: true }
-                            ].map((item, index) => (
-                                <div key={index} className="flex justify-between mt-2">
-                                    <p className="text-gray-500 text-sm font-semibold">{item.label}</p>
-                                    <p className={`font-bold ${item.highlight ? 'text-[#42E34A] text-base' : 'text-white text-xs'}`}>{item.value}</p>
-                                </div>
-                            ))}
-                            <button className="relative bg-blue-500 shadow-inner font-semibold text-white mt-4 p-2 rounded-md hover:bg-blue-600 transition flex items-center justify-center text-sm">
-                                <span className="absolute inset-0 rounded-md border border-blue-300 opacity-60 pointer-events-none"></span>
-                                <span className="relative">Integrate Now!</span>
-                            </button>
-                        </div>
+                    <div className="flex flex-col items-center justify-between -mr-40 bg-gray-900 p-6 rounded-xl w-[400px] lg:w-[400px] lg:h-[600px]">
+    {/* Left Section - Campaign List */}
+    <div className="p-4 rounded-xl bg-gray-900 w-full max-w-md overflow-hidden">
+        <h3 className="text-lg font-bold mb-4">Your Campaign:</h3>
+        <div className="space-y-3">
+            {/* Campaign Items */}
+            {[
+                { name: "Vault Wall 2", cpm: "$1.5 CPM", impressions: "2B-2.5B" },
+                { name: "Inner Vault", cpm: "$2 CPM", impressions: "0.88B-1.2B" },
+                { name: "Upper Grind Rails", cpm: "$1.8 CPM", impressions: "1.88B-2.2B" }
+            ].map((campaign, index) => (
+                <div key={index} className="p-5 bg-gray-800 rounded-xl cursor-pointer border border-transparent hover:border-blue-400 transition">
+                    <div className="flex justify-between">
+                        <h4 className="text-base font-semibold">{campaign.name}</h4>
+                        <p className="text-sm">{campaign.cpm}</p>
                     </div>
+                    <div className="flex justify-between mt-3">
+                        <p className="text-gray-400 text-sm">Expected Impressions/mo</p>
+                        <p className="text-[#42E34A] font-semibold text-base">{campaign.impressions}</p>
+                    </div>
+                </div>
+            ))}
+        </div>
+    </div>
+
+    {/* Right Section - Projected Results */}
+    <div className="bg-gray-900 p-5 w-full border-t border-gray-600 max-w-md flex flex-col -mt-4">
+        <h3 className="text-lg font-semibold">Projected Results:</h3>
+        {[
+            { label: "Duration:", value: "1 Month" },
+            { label: "Total Price:", value: "$7.8M-$10.1M" },
+            { label: "Expected Impressions /mo:", value: "4.6B-5.9B", highlight: true },
+            { label: "All Expected Performance", value: "89%", highlight: true }
+        ].map((item, index) => (
+            <div key={index} className="flex justify-between mt-3">
+                <p className="text-gray-500 text-sm font-semibold">{item.label}</p>
+                <p className={`font-bold ${item.highlight ? 'text-[#42E34A] text-base' : 'text-white text-sm'}`}>{item.value}</p>
+            </div>
+        ))}
+        <button className="relative bg-blue-500 shadow-inner font-semibold text-white mt-5 p-3 rounded-lg hover:bg-blue-600 transition flex items-center justify-center text-base">
+            <span className="absolute inset-0 rounded-lg border border-blue-300 opacity-60 pointer-events-none"></span>
+            <span className="relative">Integrate Now!</span>
+        </button>
+    </div>
+</div>
+
 
 
                 </div>

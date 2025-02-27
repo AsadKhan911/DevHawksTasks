@@ -1,6 +1,9 @@
+import {  useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
 
-const inventory = () => {
+const Inventory = () => {
+
+  const navigate = useNavigate()
   return (
     <div className="bg-[#0a0a1a] text-white font-sans min-h-screen p-5">
      
@@ -52,6 +55,7 @@ const inventory = () => {
       { img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT9qPftgiNYhpQMEXOTysLLS-7RcxKbJb2pFoEF0gEeUdrucw-kdhIVXXzydi_foYNrPk&usqp=CAU", title: "TYCOON", impressions: "300M - 6B+", color: 'bg-green-500', details: "Millionaire Tycoon\nGenre: Tycoon\nBuild & Grow Your Empire" },
     ].map((game, index) => (
       <div 
+      onClick={()=>navigate('/game')}
         key={index} 
         className="group min-w-[90%] sm:min-w-[350px] md:min-w-[300px] lg:min-w-[350px] h-[200px] bg-[#1a1a2e] rounded-lg overflow-hidden relative cursor-pointer hover:scale-105 transition-transform"
       >
@@ -83,4 +87,4 @@ const inventory = () => {
   );
 };
 
-export default inventory;
+export default Inventory;

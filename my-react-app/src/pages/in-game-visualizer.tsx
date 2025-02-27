@@ -1,8 +1,11 @@
 import { LucideUpload } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import groupImage from '../assets/group.png';
+import { useNavigate } from 'react-router-dom';
 
 const Dashboard = () => {
+
+    const navigate = useNavigate()
     const adSlots = [
         {
             title: "Central-Arena",
@@ -70,7 +73,8 @@ const Dashboard = () => {
                             <h3 className="text-lg font-bold">Visualize Your Ad Creative</h3>
                             <h2 className="text-sm text-gray-400 mt-1">Images, Videos or 3D Files</h2>
                         </div>
-                        <button className="bg-blue-500 justify-center font-semibold text-white mt-6 p-3 rounded-lg hover:bg-blue-600 transition flex items-center gap-2">
+                        <button className="bg-blue-500 justify-center font-semibold text-white mt-6 p-3 rounded-lg hover:bg-blue-600 transition flex items-center gap-2"
+                        onClick={()=>navigate('/upload-game')}>
                             Upload <LucideUpload />
                         </button>
                         <button className="bg-gray-700 font-semibold text-white mt-6 p-3 rounded-lg hover:bg-gray-800 transition">
