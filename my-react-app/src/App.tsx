@@ -1,9 +1,10 @@
-import Inventory from './pages/inventory'
+// import Inventory from './pages/inventory'
 import Game from './pages/in-game-visualizer'
 import UploadGame from './pages/in-game-visualizer2'
 import Campaign from './pages/cart'
 import CampaignDetails from './pages/cart2'
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Login from './pages/Auth/Login'
 
 function App() {
 
@@ -11,7 +12,8 @@ function App() {
     <div>
       <Router>
         <Routes>
-          <Route path="/" element={<Inventory />} />
+          <Route path="/" element={<Login />} />
+          {/* <Route path="/" element={<Inventory />} /> */}
           <Route path="/dashboard" element={<Game />} />
           <Route path="/upload-game" element={<UploadGame />} />
           <Route path="/campaigns" element={<Campaign />} />
